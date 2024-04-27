@@ -10,7 +10,7 @@
 <body>
     <div class="form">
         <h2> Cadastro de Alunos</h2>
-        <form action="cadastro_alunos.php" method="POST">
+        <form action="alunos.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
             <label for="matricula">Matrícula:</label>

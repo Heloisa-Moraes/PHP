@@ -10,7 +10,7 @@
 <body>
     <div class="form">
         <h2> Cadastro de Professores</h2>
-        <form action="cadastro_professores.php" method="POST">
+        <form action="professores.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
             <label for="disciplina">Disciplina:</label>
@@ -24,9 +24,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
-    $matricula = $_POST["disciplina"];
+    $disciplina = $_POST["disciplina"];
 
-    $conexao = mysqli_connect("localhost", "usuario", "senha", "banco");
+    $conexao = mysqli_connect("localhost", "root", "", "banco");
     $query = "INSERT INTO professores (nome, disciplina) VALUES ('$nome', '$disciplina')";
     mysqli_query($conexao, $query);
     mysqli_close($conexao);
